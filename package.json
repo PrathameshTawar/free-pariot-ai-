@@ -5,56 +5,6 @@
   "license": "GPL-3.0-or-later",
   "author": "cue",
   "main": "main.js",
-  "scripts": {
-    "start": "electron .",
-    "test": "node --test",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder --mac zip",
-    "dist:win": "electron-builder --win"
-  },
-  "build": {
-    "appId": "com.cue.overlay",
-    "productName": "cue",
-    "asar": false,
-    "files": [
-      "main.js",
-      "preload.js",
-      "src/**/*",
-      "renderer/**/*"
-    ],
-    "mac": {
-      "target": [
-        "dir"
-      ],
-      "category": "public.app-category.productivity",
-      "hardenedRuntime": false,
-      "gatekeeperAssess": false,
-      "identity": null,
-      "extendInfo": {
-        "LSUIElement": true,
-        "NSMicrophoneUsageDescription": "cue transcribes your microphone so it can help you in conversations.",
-        "NSCameraUsageDescription": "cue does not use the camera.",
-        "NSAudioCaptureUsageDescription": "cue captures system audio to transcribe the other participant in a call."
-      }
-    },
-    "win": {
-      "target": [
-        "nsis"
-      ]
-    }
-  },
-  "keywords": [
-    "electron",
-    "overlay",
-    "ai",
-    "assistant",
-    "screencapturekit",
-    "macos"
-  ],
-  "devDependencies": {
-    "electron": "33.2.1",
-    "electron-builder": "^24.13.3"
-  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",
     "@google/genai": "^0.3.0",

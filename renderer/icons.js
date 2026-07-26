@@ -14,21 +14,21 @@
   // Filled glyphs (no stroke)
   const FILLED = {
     play: '<path d="M6 4.5v15a1 1 0 0 0 1.5.87l12-7.5a1 1 0 0 0 0-1.74l-12-7.5A1 1 0 0 0 6 4.5z"/>',
-    'stop-square': '<rect x="5" y="5" width="14" height="14" rx="3.5"/>',
-    'send-up': '<path d="M12 3.5 5.5 10.5h4V19a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-8.5h4L12 3.5z"/>'
+    'stop-square': '<rect x="5" y="5" width="14" height="14" rx="3.5"/>'
   };
-  // cue logo — keycap "D" representing the Ctrl+Alt+D shortcut.
+  // cue logo — a pinwheel/compass mark inside a ring, echoing Cluely's glyph.
   const LOGO = '<svg viewBox="0 0 24 24" width="SIZE" height="SIZE" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-    '<rect x="3" y="3" width="18" height="18" rx="5" fill="currentColor" opacity="0.15"/>' +
-    '<rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/>' +
-    '<rect x="3.5" y="16.5" width="17" height="3.5" rx="2" fill="currentColor" opacity="0.25"/>' +
-    '<text x="12" y="15.5" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10.5" font-weight="700" fill="currentColor" letter-spacing="-0.5">D</text>' +
+    '<circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/>' +
+    '<path d="M12 12 6.5 8.2a6.6 6.6 0 0 1 5.5-2.9V12z" fill="currentColor"/>' +
+    '<path d="M12 12 15.8 6.5a6.6 6.6 0 0 1 2.9 5.5H12z" fill="currentColor" opacity="0.72"/>' +
+    '<path d="M12 12 17.5 15.8a6.6 6.6 0 0 1-5.5 2.9V12z" fill="currentColor" opacity="0.5"/>' +
+    '<path d="M12 12 8.2 17.5a6.6 6.6 0 0 1-2.9-5.5H12z" fill="currentColor" opacity="0.85"/>' +
     '</svg>';
 
   function icon(name, opts) {
     opts = opts || {};
     const size = opts.size || 16;
-    const stroke = opts.stroke != null ? opts.stroke : 1.75;
+    const stroke = opts.stroke != null ? opts.stroke : 2;
     if (name === 'logo') return LOGO.replaceAll('SIZE', size);
     if (FILLED[name]) {
       return '<svg viewBox="0 0 24 24" width="' + size + '" height="' + size + '" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg">' + FILLED[name] + '</svg>';

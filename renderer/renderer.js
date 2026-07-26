@@ -8,16 +8,16 @@
   const DEFAULT_ASSIST_SHORTCUT = 'CommandOrControl+Return';
 
   // ---- paint icons -------------------------------------------------------
-  $('#logo-btn').innerHTML = icon('logo', { size: 22 });
-  $('.tb-hide .chev').innerHTML = icon('chevron-down', { size: 13 });
-  $('#stop-btn').innerHTML = icon('stop-square', { size: 14 });
-  document.querySelector('.act[data-mode="assist"] .ic').innerHTML = icon('sparkles', { size: 15 });
-  document.querySelector('.act[data-mode="say"] .ic').innerHTML = icon('wand-sparkles', { size: 15 });
-  document.querySelector('.act[data-mode="followup"] .ic').innerHTML = icon('message-circle', { size: 15 });
-  document.querySelector('.act[data-mode="recap"] .ic').innerHTML = icon('refresh-cw', { size: 15 });
-  $('#smart-toggle .ic').innerHTML = icon('zap', { size: 13 });
-  $('#more-btn').innerHTML = icon('settings', { size: 17 });
-  $('#send-btn').innerHTML = icon('send-up', { size: 15 });
+  $('#logo-btn').innerHTML = icon('logo', { size: 18 });
+  $('.tb-hide .chev').innerHTML = icon('chevron-down', { size: 14 });
+  $('#stop-btn').innerHTML = icon('stop-square', { size: 15 });
+  document.querySelector('.act[data-mode="assist"] .ic').innerHTML = icon('sparkles', { size: 16 });
+  document.querySelector('.act[data-mode="say"] .ic').innerHTML = icon('wand-sparkles', { size: 16 });
+  document.querySelector('.act[data-mode="followup"] .ic').innerHTML = icon('message-circle', { size: 16 });
+  document.querySelector('.act[data-mode="recap"] .ic').innerHTML = icon('refresh-cw', { size: 16 });
+  $('#smart-toggle .ic').innerHTML = icon('zap', { size: 14 });
+  $('#more-btn').innerHTML = icon('more-horizontal', { size: 18 });
+  $('#send-btn').innerHTML = icon('play', { size: 15 });
 
   // ---- state -------------------------------------------------------------
   let settings = null;
