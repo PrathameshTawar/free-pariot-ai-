@@ -45,7 +45,7 @@ There are two ways to install cue. **If you're not a developer, use Option A.**
 
 ### Option A — Download the app (easiest)
 
-1. Go to the [**Releases**](../../releases) page and download **`cue-mac.zip`**.
+1. Go to the [**Releases**](../../releases) page and download **`cue-mac.zip`**. (If this repo has no release yet, build one yourself with `npm run dist:mac`, or use Option B.)
 2. Double-click the zip to unzip it. You'll get **`cue.app`**.
 3. Drag **`cue.app`** into your **Applications** folder.
 4. **First open (important):** because cue is a free app without a paid Apple certificate, macOS will refuse to open it normally the first time. Do this once:
@@ -63,8 +63,8 @@ After that, cue opens normally forever.
 You need [Node.js](https://nodejs.org) 18+ installed. No Xcode required.
 
 ```bash
-git clone https://github.com/Blueturboguy07/cue.git
-cd cue
+git clone https://github.com/PrathameshTawar/free-pariot-ai-.git
+cd free-pariot-ai-
 npm install
 npm start
 ```
@@ -187,6 +187,8 @@ Issues and PRs welcome. cue is intentionally small and readable — `main.js` (a
 - [ ] Add optional Deepgram support for ultra-fast transcription
 
 ## Credits & license
+
+Based on [**cue**](https://github.com/Blueturboguy07/cue) by Blueturboguy07, used under the GPL-3.0-or-later license.
 
 Built as an open-source study of how tools like **Cluely** and **Interview Coder** work. Modeled on the open-source clones `pickle-com/glass` and `sohzm/cheating-daddy`.
 

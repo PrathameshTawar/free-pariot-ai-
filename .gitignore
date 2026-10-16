@@ -2,3 +2,12 @@ node_modules/
 dist/
 .DS_Store
 *.log
+
+# Prebuilt Electron runtime files (npm install provides Electron)
+*.dll
+*.pak
+*.bin
+LICENSES.chromium.html
+LICENSE.electron.txt
+vk_swiftshader_icd.json
+app-update.yml
