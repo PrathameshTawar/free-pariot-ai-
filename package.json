@@ -5,10 +5,43 @@
   "license": "GPL-3.0-or-later",
   "author": "cue",
   "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test",
+    "pack": "electron-builder --mac --dir",
+    "dist:mac": "electron-builder --mac zip",
+    "dist:win": "electron-builder --win nsis",
+    "dist:linux": "electron-builder --linux AppImage"
+  },
+  "build": {
+    "appId": "com.cue.app",
+    "productName": "cue",
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "renderer/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "identity": null,
+      "extendInfo": {
+        "NSMicrophoneUsageDescription": "cue listens to your microphone to transcribe the conversation.",
+        "NSScreenCaptureUsageDescription": "cue reads your screen to help with what you're looking at."
+      }
+    },
+    "win": { "target": "nsis" },
+    "linux": { "target": "AppImage" }
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",
     "@google/genai": "^0.3.0",
     "lucide-static": "^0.468.0",
     "openai": "^4.73.0"
+  },
+  "devDependencies": {
+    "electron": "33.2.1",
+    "electron-builder": "^24.13.3"
   }
 }
